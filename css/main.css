@@ -720,7 +720,7 @@ a {
     min-height: 106.25vw;
   }
   .section-1 .mobile .mobile-inner .mobile-bg-img {
-    background-image: url(./assets/images/main_banner_foreign_hanam.jpg);
+    background-image: url(../assets/images/main_banner_foreign_hanam.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -853,7 +853,7 @@ a {
   }
 }
 .section-3 {
-  background-image: url(./assets/images/bg_swypeFieldWrap);
+  background-image: url(../assets/images/bg_swypeFieldWrap.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -985,7 +985,7 @@ a {
 }
 
 .section-4 {
-  background-image: url(./assets/images/bestCampaign_main_bg.jpg);
+  background-image: url(../assets/images/bestCampaign_main_bg.jpg);
 }
 .section-4 .best-inner {
   position: relative;
@@ -1252,13 +1252,13 @@ a {
   background-size: contain;
 }
 .footer-1__right .util-wrap .social-link .insta {
-  background-image: url(./assets/images/btn_socialInstagram.png);
+  background-image: url(../assets/images/btn_socialInstagram.png);
 }
 .footer-1__right .util-wrap .social-link .youtube {
-  background-image: url(./assets/images/btn_socialYoutube.png);
+  background-image: url(../assets/images/btn_socialYoutube.png);
 }
 .footer-1__right .util-wrap .social-link .blog {
-  background-image: url(./assets/images/btn_socialBlog.png);
+  background-image: url(../assets/images/btn_socialBlog.png);
 }
 
 @media (max-width: 936px) {
@@ -1423,12 +1423,12 @@ a {
     background-size: contain;
   }
   .footer-2 .util-2 .social-link .insta {
-    background-image: url(./assets/images/btn_socialInstagram.png);
+    background-image: url(../assets/images/btn_socialInstagram.png);
   }
   .footer-2 .util-2 .social-link .youtube {
-    background-image: url(./assets/images/btn_socialYoutube.png);
+    background-image: url(../assets/images/btn_socialYoutube.png);
   }
   .footer-2 .util-2 .social-link .blog {
-    background-image: url(./assets/images/btn_socialBlog.png);
+    background-image: url(../assets/images/btn_socialBlog.png);
   }
 }
