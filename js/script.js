@@ -36,11 +36,9 @@ function mobileSideBarHide() {
   $(".mobile-menu > ul ul").stop().slideUp();
   $(".mobile-menu ul > li.active").removeClass("active");
 }
-
 /* 모바일 사이드바 구현 끝 */
 
 /* 아코디언 메뉴 구현 시작 */
-
 function mobileSideMenuInit() {
   // depth1 li 에 마우스 올렸을 때 열기
   $(".mobile-menu ul > li").click(function () {
@@ -73,7 +71,6 @@ function mobileSideMenuInit() {
 }
 
 mobileSideMenuInit();
-
 /* 아코디언 메뉴 구현 끝 */
 
 $(function () {
@@ -186,7 +183,7 @@ function section3SwiperInit() {
 
     // 자동 재생 설정
     autoplay: {
-      delay: 4000, // 4초마다 자동 전환
+      delay: 3000, // 3초마다 자동 전환
       disableOnInteraction: false, // 사용자 상호작용 후에도 자동재생 유지
       pauseOnMouseEnter: true, // 마우스 호버 시 일시정지
     },
