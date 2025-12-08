@@ -89,6 +89,7 @@ a {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
+  overflow: hidden;
 }
 .mobile-side-bar.active {
   opacity: 1;
@@ -96,6 +97,7 @@ a {
 }
 .mobile-side-bar.active .side-bar-content-box {
   transform: translateX(0);
+  left: 0;
 }
 .mobile-side-bar .side-bar-content-box {
   width: 70%;
@@ -168,7 +170,7 @@ a {
 
 .mobile-menu__body .mobile-menu {
   margin-top: 20px;
-  flex-shrink: 1;
+  flex-shrink: 0;
   overflow-x: hidden;
 }
 .mobile-menu__body .mobile-menu > ul ul {
@@ -301,7 +303,7 @@ a {
 .header-top-bar .menu-box .menu-inner .menu-list__item::before {
   position: absolute;
   content: "";
-  background-image: url(./assets/images/btn_pcTitGnbActive.png);
+  background-image: url(https://www.starfield.co.kr/images/icon/button/btn_pcTitGnbActive.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 1rem;
@@ -434,7 +436,7 @@ a {
 .new-header .menu-box .menu-inner .menu-list__item::before {
   position: absolute;
   content: "";
-  background-image: url(./assets/images/btn_pcTitGnbActive.png);
+  background-image: url(https://www.starfield.co.kr/images/icon/button/btn_pcTitGnbActive.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 1rem;
@@ -532,7 +534,7 @@ a {
 }
 
 .mobile-top-bar {
-  height: 17.19vw;
+  height: 20.5vw;
   display: none;
   position: fixed;
   top: 0;
@@ -540,8 +542,13 @@ a {
   box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 .mobile-top-bar .con {
-  margin-inline: 2rem;
+  margin-inline: 1rem;
   height: 100%;
+}
+@media (max-width: 550px) {
+  .mobile-top-bar .con {
+    margin-top: 0.3vh;
+  }
 }
 .mobile-top-bar .con .mobile-icon-btn a {
   display: flex;
@@ -552,10 +559,10 @@ a {
 }
 .mobile-top-bar .con .mobile-top-bar__left,
 .mobile-top-bar .con .mobile-top-bar__right {
-  flex: 0 0 25%;
+  flex: 0 0 20%;
 }
 .mobile-top-bar .con .mobile-top-bar__mid {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 }
 .mobile-top-bar .con .mobile-top-bar__mid .logo-box img {
   display: block;
@@ -563,17 +570,17 @@ a {
   height: 71px;
 }
 .mobile-top-bar .con .mobile-icon {
-  width: clamp(26px, 9vw, 39px);
+  width: clamp(22px, 8vw, 36px);
   height: auto;
   display: block;
 }
 .mobile-top-bar .con .mobile-label {
-  font-size: clamp(18px, 3.5vw, 20px);
+  font-size: clamp(16px, 3.5vw, 18px);
   font-weight: 600;
   line-height: 2;
 }
 .mobile-top-bar .con .mobile-top-bar__right .util-wrap li + li {
-  margin-left: 3.5vw;
+  margin-left: 2.5vw;
 }
 .mobile-top-bar .con .mobile-top-bar__right .util-wrap .store {
   color: #c31432;
@@ -717,10 +724,10 @@ a {
   }
   .section-1 .mobile .mobile-inner {
     position: relative;
-    min-height: 106.25vw;
+    min-height: 104.25vw;
   }
   .section-1 .mobile .mobile-inner .mobile-bg-img {
-    background-image: url(../assets/images/main_banner_foreign_hanam.jpg);
+    background-image: url(https://www.starfield.co.kr/fonts/images/layout/main_banner_foreign_hanam.jpg?ver=1764247152000);
     background-size: cover;
     background-position: center;
   }
@@ -744,7 +751,7 @@ a {
     font-weight: 600;
   }
   .section-1 .mobile .mobile-inner .mobile-sectionBox a {
-    margin-top: 7vw;
+    margin-top: 5vw;
     font-size: 5vw;
     line-height: 2;
     border: 2px solid #fff;
@@ -755,6 +762,11 @@ a {
 .section-2 {
   padding: 9rem 0 9em;
 }
+@media (max-width: 550px) {
+  .section-2 {
+    padding: 5rem 0 5rem;
+  }
+}
 .section-2 .content-wrap .content-header {
   text-align: center;
 }
@@ -763,10 +775,20 @@ a {
   font-weight: 700;
   white-space: nowrap;
 }
+@media (max-width: 550px) {
+  .section-2 .content-wrap .content-header .content-title {
+    font-size: 2rem !important;
+  }
+}
 .section-2 .content-wrap .content-text {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   margin-bottom: 3rem;
   font-size: 1.1rem;
+}
+@media (max-width: 550px) {
+  .section-2 .content-wrap .content-text {
+    font-size: 1.05rem !important;
+  }
 }
 
 .grid-event {
@@ -777,12 +799,21 @@ a {
 }
 .grid-event .grid-event-item {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 1rem;
+}
+@media (max-width: 550px) {
+  .grid-event .grid-event-item {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
 }
 .grid-event .grid-event-item .grid-list {
   position: relative;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  min-width: 0;
 }
 .grid-event .grid-event-item .grid-list .img-box {
   width: 100%;
@@ -809,24 +840,34 @@ a {
   transform: scale(1.2);
 }
 .grid-event .grid-event-item .grid-list .img-box .grid-text {
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: left;
   background-color: #eee;
-  display: flex;
-  flex-grow: 1;
+  flex: 1;
   flex-direction: column;
   z-index: 20;
 }
 .grid-event .grid-event-item .grid-list .img-box .grid-text .title {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
+}
+@media (max-width: 550px) {
+  .grid-event .grid-event-item .grid-list .img-box .grid-text .title {
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+  }
 }
 .grid-event .grid-event-item .grid-list .img-box .grid-text .des {
   font-weight: 400;
   font-size: 1rem;
   color: #666;
   margin-top: auto;
+}
+@media (max-width: 550px) {
+  .grid-event .grid-event-item .grid-list .img-box .grid-text .des {
+    font-size: 0.9rem !important;
+  }
 }
 
 @media (max-width: 950px) {
@@ -836,8 +877,7 @@ a {
   .content-header .content-text {
     font-size: 1.5rem !important;
     font-weight: 330 !important;
-    margin-top: 0.5rem !important;
-    margin-bottom: 1rem !important;
+    margin-block: 0.5rem 1rem !important;
   }
   .grid-event .grid-event-item {
     grid-template-columns: repeat(2, 1fr);
@@ -853,7 +893,7 @@ a {
   }
 }
 .section-3 {
-  background-image: url(../assets/images/bg_swypeFieldWrap.jpg);
+  background-image: url(https://www.starfield.co.kr/fonts/images/hanam/bg_swypeFieldWrap.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -862,12 +902,12 @@ a {
 }
 .section-3 .field-inner {
   position: relative;
-  min-height: 45rem;
+  min-height: 26rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 6rem 0;
+  padding: 4rem 0;
   aspect-ratio: 16/9;
 }
 .section-3 .field-inner .field-header {
@@ -983,9 +1023,19 @@ a {
     display: none;
   }
 }
+@media (max-width: 550px) {
+  .section-3 .field-header .field-title {
+    font-size: 7.562vw !important;
+    font-weight: 700;
+  }
+  .section-3 .field-header .field-text {
+    font-size: 4.75vw !important;
+    margin-top: 0.8vw !important;
+  }
+}
 
 .section-4 {
-  background-image: url(../assets/images/bestCampaign_main_bg.jpg);
+  background-image: url(https://www.starfield.co.kr/images/bestcampaign/bestCampaign_main_bg.jpg);
 }
 .section-4 .best-inner {
   position: relative;
@@ -1002,6 +1052,12 @@ a {
   padding: 6rem 0;
   /* 스와이퍼 슬라이드 */
 }
+@media (max-width: 550px) {
+  .section-4 .best-inner {
+    padding: 4rem 0;
+    min-height: 20rem;
+  }
+}
 .section-4 .best-inner .best-header {
   width: 100%;
   text-align: center;
@@ -1015,9 +1071,23 @@ a {
   font-size: 1.1rem;
   margin-top: 0.2rem;
 }
+@media (max-width: 550px) {
+  .section-4 .best-inner .best-header .best-title {
+    font-size: 7.562vw !important;
+    font-weight: 700;
+  }
+  .section-4 .best-inner .best-header .best-text {
+    font-size: 4.75vw !important;
+  }
+}
 .section-4 .best-inner .best-item {
   width: 100%;
   margin-top: 4rem;
+}
+@media (max-width: 550px) {
+  .section-4 .best-inner .best-item {
+    margin-top: 2rem;
+  }
 }
 .section-4 .best-inner .best-item .swiper-wrapper .swiper-slide {
   transform: scale(0.9);
@@ -1044,8 +1114,14 @@ a {
   background-color: #fff;
   font-weight: 600;
   font-size: 1.1rem;
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
+}
+@media (max-width: 550px) {
+  .section-4 .best-inner .best-item .swiper-wrapper .swiper-slide .slide-content .best-des {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
 .section-4 .best-inner .best-btn-box {
   position: relative;
@@ -1088,6 +1164,11 @@ a {
 }
 .section-4 .best-inner .best-btn-box .best-btn-group .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #c30e2e;
+}
+@media (max-width: 550px) {
+  .section-4 .best-inner .best-btn-box {
+    display: none;
+  }
 }
 .section-4 .best-inner .best-moreLink {
   display: flex;
@@ -1252,13 +1333,13 @@ a {
   background-size: contain;
 }
 .footer-1__right .util-wrap .social-link .insta {
-  background-image: url(../assets/images/btn_socialInstagram.png);
+  background-image: url(https://www.starfield.co.kr/images/icon/button/btn_socialInstagram.png);
 }
 .footer-1__right .util-wrap .social-link .youtube {
-  background-image: url(../assets/images/btn_socialYoutube.png);
+  background-image: url(https://www.starfield.co.kr/images/icon/button/btn_socialYoutube.png);
 }
 .footer-1__right .util-wrap .social-link .blog {
-  background-image: url(../assets/images/btn_socialBlog.png);
+  background-image: url(https://www.starfield.co.kr/images/icon/button/btn_socialBlog.png);
 }
 
 @media (max-width: 936px) {
@@ -1423,12 +1504,24 @@ a {
     background-size: contain;
   }
   .footer-2 .util-2 .social-link .insta {
-    background-image: url(../assets/images/btn_socialInstagram.png);
+    background-image: url(https://www.starfield.co.kr/images/icon/button/btn_socialInstagram.png);
   }
   .footer-2 .util-2 .social-link .youtube {
-    background-image: url(../assets/images/btn_socialYoutube.png);
+    background-image: url(https://www.starfield.co.kr/images/icon/button/btn_socialYoutube.png);
   }
   .footer-2 .util-2 .social-link .blog {
-    background-image: url(../assets/images/btn_socialBlog.png);
+    background-image: url(https://www.starfield.co.kr/images/icon/button/btn_socialBlog.png);
+  }
+}
+@media (max-width: 550px) {
+  .footer-1 .footer-info .info-box a:not(.title) {
+    padding-inline: 10px !important;
+  }
+  .footer-2 {
+    font-size: 1rem !important;
+  }
+  .footer-2 .util-2 .social-link a {
+    width: 2rem;
+    height: 2rem;
   }
 }
